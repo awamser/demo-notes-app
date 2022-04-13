@@ -18,6 +18,7 @@
 
 # environments
 .env*.local
+.idea
 
 # Secret file
 .env

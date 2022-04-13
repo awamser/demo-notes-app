@@ -28,5 +28,8 @@
     "arrowParens": "always",
     "printWidth": 120,
     "trailingComma": "none"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.34"
   }
 }
