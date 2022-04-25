@@ -17,13 +17,14 @@ function querystring(name, url = window.location.href) {
 export default function UnauthenticatedRoute(props) {
   const {children, ...rest} = props;
   const {isAuthenticated} = useAppContext();
+  const redirect = querystring('redirect');
 
   return (
     <Route {...rest}>
       {!isAuthenticated ? (
         cloneElement(children, props)
       ) : (
-        <Redirect to="/"/>
+        <Redirect to={redirect ? redirect : '/'}/>
       )}
     </Route>
   );
